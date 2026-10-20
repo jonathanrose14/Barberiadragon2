@@ -441,7 +441,7 @@ button {
 }
 
 .btn-dragon,
-.newletterenviar,
+.newsletterenviar,
 .formulariocontacto input[type="submit"] {
     background-color: #E8B5A7;
     color: #FFF4EA;
@@ -451,20 +451,20 @@ button {
 
 /* estados interactivos de los botones */
 .btn-dragon:hover,
-.newletterenviar:hover,
+.newsletterenviar:hover,
 .formulariocontacto input[type="submit"]:hover {
     background-color: #414D4A;
     color: #FFF4EA;
 }
 
 .btn-dragon:focus,
-.newletterenviar:focus,
+.newsletterenviar:focus,
 .formulariocontacto input[type="submit"]:focus {
     box-shadow: 0 0 0 0.3rem rgba(65, 77, 74, 0.5);
 }
 
 .btn-dragon:active,
-.newletterenviar:active,
+.newsletterenviar:active,
 .formulariocontacto input[type="submit"]:active {
     transform: scale(0.95);
 }

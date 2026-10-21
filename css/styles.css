@@ -31,6 +31,9 @@ body {
 .navbar-dragon {
     padding: 1.5rem 2rem;
     background-color: #9FAD9F;
+    --bs-navbar-toggler-font-size: 2rem;
+    --bs-navbar-toggler-padding-y: 0.8rem;
+    --bs-navbar-toggler-padding-x: 1.2rem;
 }
 
 .navbar-dragon .navbar-brand {
@@ -346,6 +349,11 @@ footer nav ul {
     flex-wrap: wrap;
     justify-content: center;
 }
+footer a img {
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
+}
 
 /* estados interactivos de los links del footer */
 footer a:hover {
@@ -427,6 +435,8 @@ button {
 
 /* Variables de Bootstrap con la paleta propia (así no se pisan los estados) */
 .btn-dragon {
+    --bs-btn-padding-y: 1rem;
+    --bs-btn-padding-x: 2rem;
     --bs-btn-color: #FFF4EA;
     --bs-btn-bg: #E8B5A7;
     --bs-btn-border-color: #E8B5A7;

@@ -276,6 +276,14 @@ body {
     padding: 40px 20px;
 }
 
+/* ===== MOBILE: botón del newsletter centrado ===== */
+@media (max-width: 767.98px) {
+    .newsletterenviar {
+        display: block;
+        margin: 1rem auto 0;
+    }
+}
+
 /* ===== FORMULARIO DE CONTACTO ===== */
 .formulariocontacto {
     display: flex;
@@ -349,6 +357,7 @@ footer nav ul {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 footer a img {
     width: 2.4rem;
     height: 2.4rem;
@@ -416,6 +425,7 @@ ul {
 /* ===== CONTENIDO PRINCIPAL ===== */
 main {
     color: #414D4A;
+    padding-bottom: 4rem;
 }
 
 /* ===== UTILIDADES DE ALINEACIÓN ===== */

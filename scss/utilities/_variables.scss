@@ -1,0 +1,29 @@
+// ===== COLORES =====
+$color-fondo: #FFF4EA;
+$color-primario: #9FAD9F;
+$color-acento: #E8B5A7;
+$color-texto: #414D4A;
+$color-error: #dc3545;
+
+// ===== TIPOGRAFÍAS =====
+$fuente-titulos: "Tenor Sans", sans-serif;
+$fuente-cuerpo: "DM Sans", sans-serif;
+
+// ===== TAMAÑOS DE TEXTO FLUIDOS (1rem = 10px por el 62.5%) =====
+$texto-size: clamp(1.6rem, 1.3rem + 0.8vw, 2.5rem);
+$h1-size: clamp(3.2rem, 2rem + 3vw, 6rem);
+$h2-size: clamp(2.4rem, 1.6rem + 2vw, 4rem);
+$h3-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+
+// ===== ESPACIADO =====
+$espacio-chico: 20px;
+$espacio-medio: 30px;
+$espacio-grande: 40px;
+$espacio-extra: 60px;
+
+// ===== BREAKPOINTS =====
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// ===== GRID =====
+$una-columna: minmax(0, 1fr);

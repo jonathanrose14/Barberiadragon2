@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== BOTONES =====
+button {
+  background-color: $color-acento;
+  color: $color-fondo;
+}
+
+// MOBILE: botón del newsletter centrado
+.newsletterenviar {
+  @include solo-mobile {
+    display: block;
+    margin: 1rem auto 0;
+  }
+}
+
+// Variables de Bootstrap con la paleta propia (así no se pisan los estados)
+.btn-dragon {
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-color: #{$color-fondo};
+  --bs-btn-bg: #{$color-acento};
+  --bs-btn-border-color: #{$color-acento};
+  --bs-btn-hover-color: #{$color-fondo};
+  --bs-btn-hover-bg: #{$color-texto};
+  --bs-btn-hover-border-color: #{$color-texto};
+  --bs-btn-active-color: #{$color-fondo};
+  --bs-btn-active-bg: #{$color-texto};
+  --bs-btn-active-border-color: #{$color-texto};
+  font-family: $fuente-titulos;
+  font-size: var(--texto-size);
+}
+
+.btn-dragon,
+.newsletterenviar,
+.formulariocontacto input[type="submit"] {
+  background-color: $color-acento;
+  color: $color-fondo;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+  // estados interactivos de los botones
+  &:hover {
+    background-color: $color-texto;
+    color: $color-fondo;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.3rem rgba($color-texto, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

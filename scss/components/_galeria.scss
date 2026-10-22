@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+
+// ===== GALERÍA (carousel de Bootstrap) =====
+.galeria__img {
+  height: 40rem;
+  object-fit: contain;
+  background-color: $color-texto;
+}
+
+.galeria__caption {
+  background-color: rgba($color-texto, 0.75);
+  border-radius: 0.5rem;
+}

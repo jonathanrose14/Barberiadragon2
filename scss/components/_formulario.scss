@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== FORMULARIO DE CONTACTO =====
+.formulariocontacto {
+  @include flex-columna(15px);
+
+  label {
+    color: $color-texto;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: var(--texto-size);
+    border: 2px solid $color-primario;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    // estados interactivos de los campos
+    &:hover {
+      border-color: $color-texto;
+    }
+
+    &:focus {
+      border-color: $color-acento;
+      outline: none;
+      box-shadow: 0 0 0 0.3rem rgba($color-acento, 0.6);
+    }
+  }
+
+  textarea {
+    min-height: 15rem;
+    resize: vertical;
+  }
+
+  input[type="submit"] {
+    width: auto;
+    padding: 10px 30px;
+  }
+
+  // campo inválido mientras tiene el foco
+  input:focus:invalid,
+  textarea:focus:invalid {
+    border-color: $color-error;
+    box-shadow: 0 0 0 0.3rem rgba($color-error, 0.4);
+  }
+}

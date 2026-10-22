@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+
+// ===== Modal (Bootstrap con paleta propia) =====
+.modal-dragon {
+  background-color: $color-fondo;
+  color: $color-texto;
+  border: 2px solid $color-primario;
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 2rem;
+    border-color: $color-primario;
+  }
+
+  .modal-title {
+    text-align: left;
+  }
+}

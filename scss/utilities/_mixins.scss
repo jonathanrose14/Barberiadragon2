@@ -1,0 +1,46 @@
+@use "variables" as *;
+
+// Columna con separación (flex)
+@mixin flex-columna($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// Media queries (mobile-first)
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin solo-mobile {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+// Efecto hover/active de las tarjetas
+@mixin efecto-tarjeta {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba($color-texto, 0.25);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
+// Función: n columnas iguales
+@function columnas($n) {
+  @return repeat($n, minmax(0, 1fr));
+}

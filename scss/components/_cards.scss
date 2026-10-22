@@ -1,0 +1,51 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== TARJETAS DE CORTES (GRID: 1 columna en mobile) =====
+.cortes-contenedor {
+  display: grid;
+  grid-template-columns: $una-columna;
+  gap: $espacio-medio;
+
+  @include tablet {
+    grid-template-columns: columnas(2);
+  }
+
+  @include desktop {
+    grid-template-columns: columnas(3);
+  }
+}
+
+.corte-card {
+  padding: $espacio-chico;
+  background-color: $color-fondo;
+  @include efecto-tarjeta;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ===== Card de ofertas (Bootstrap con paleta propia) =====
+.card-oferta {
+  background-color: $color-fondo;
+  border: 1px solid $color-primario;
+  color: $color-texto;
+  @include efecto-tarjeta;
+
+  .card-body {
+    @include flex-columna(1.5rem);
+    padding: 2rem;
+  }
+}
+
+// ===== Aviso de la página de ofertas =====
+.aviso-ofertas {
+  grid-area: aviso;
+  padding: $espacio-chico;
+  text-align: center;
+  background-color: $color-acento;
+  color: $color-texto;
+}

@@ -1,0 +1,48 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== FOOTER =====
+footer {
+  @include flex-columna($espacio-chico);
+  align-items: center;
+  padding: $espacio-grande $espacio-chico;
+  background-color: $color-primario;
+  color: $color-fondo;
+
+  // ===== FOOTER - REDES SOCIALES =====
+  a {
+    text-decoration: none;
+    color: $color-fondo;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+      object-fit: contain;
+    }
+
+    // estados interactivos de los links del footer
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      outline: 2px solid $color-acento;
+    }
+
+    &:active {
+      opacity: 1;
+      transform: scale(0.95);
+    }
+  }
+
+  nav ul {
+    display: flex;
+    gap: $espacio-chico;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

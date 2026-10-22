@@ -1,0 +1,157 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== SECCIONES (ESPACIADO) =====
+.seccion {
+  @include flex-columna($espacio-medio);
+  padding: $espacio-grande $espacio-chico;
+  margin-bottom: $espacio-extra;
+}
+
+// ===== INDEX: GRID MAESTRO DEL MAIN (MOBILE: 1 columna) =====
+.grid-principal {
+  display: grid;
+  gap: $espacio-grande;
+  grid-template-columns: $una-columna;
+  grid-template-areas:
+    "banner"
+    "mapa"
+    "cortes"
+    "video";
+
+  // dentro del grid el espacio lo maneja el gap
+  .seccion {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    grid-template-columns: columnas(2);
+    grid-template-areas:
+      "banner banner"
+      "cortes cortes"
+      "mapa   video";
+  }
+}
+
+.cortes {
+  grid-area: cortes;
+}
+
+// ===== MAPA Y VIDEO (iframes fluidos) =====
+.mapa,
+.video {
+  @include flex-columna($espacio-chico);
+  padding: 0 $espacio-chico;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+}
+
+.mapa {
+  grid-area: mapa;
+
+  iframe {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.video {
+  grid-area: video;
+
+  iframe {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+// ===== PÁGINA OFERTAS: GRID (MOBILE: 1 columna) =====
+.grid-ofertas {
+  display: grid;
+  gap: $espacio-medio;
+  padding: $espacio-grande $espacio-chico;
+  grid-template-columns: $una-columna;
+  grid-template-areas:
+    "titulo"
+    "ofertas"
+    "aviso";
+
+  @include desktop {
+    grid-template-columns: columnas(3);
+    grid-template-areas:
+      "titulo  titulo  titulo"
+      "ofertas ofertas aviso";
+  }
+}
+
+.titulo-ofertas {
+  grid-area: titulo;
+}
+
+.lista-ofertas {
+  grid-area: ofertas;
+  display: grid;
+  grid-template-columns: $una-columna;
+  gap: $espacio-medio;
+
+  @include tablet {
+    grid-template-columns: columnas(2);
+  }
+
+  @include desktop {
+    grid-template-columns: columnas(2);
+  }
+}
+
+// ===== PÁGINA NOSOTROS: GRID (MOBILE: 1 columna) =====
+.grid-nosotros {
+  display: grid;
+  gap: $espacio-medio;
+  padding: $espacio-grande $espacio-chico;
+  grid-template-columns: $una-columna;
+  grid-template-areas:
+    "titulo"
+    "imagen"
+    "texto";
+
+  @include desktop {
+    grid-template-columns: columnas(2);
+    grid-template-areas:
+      "titulo titulo"
+      "texto  imagen";
+    align-items: center;
+  }
+}
+
+.titulo-nosotros {
+  grid-area: titulo;
+}
+
+.texto-nosotros {
+  grid-area: texto;
+}
+
+.imagen-nosotros {
+  grid-area: imagen;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// ===== PÁGINA CONTACTO (MOBILE: 1 columna) =====
+.seccion-contacto {
+  @include flex-columna($espacio-medio);
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: $espacio-grande $espacio-chico;
+
+  @include desktop {
+    max-width: 80rem;
+  }
+}

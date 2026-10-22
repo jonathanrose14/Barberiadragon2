@@ -1,0 +1,43 @@
+@use "../utilities/variables" as *;
+
+// ===== TIPOGRAFÍA (Google Fonts) =====
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Tenor+Sans&display=swap');
+
+// ===== TIPOGRAFÍA GENERAL (tamaños y familias) =====
+p,
+a,
+button,
+label,
+select {
+  font-size: var(--texto-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input {
+  font-family: $fuente-titulos;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--h2-size);
+}
+
+h3 {
+  text-align: center;
+  font-size: var(--h3-size);
+}
+
+p,
+label,
+select {
+  font-family: $fuente-cuerpo;
+}

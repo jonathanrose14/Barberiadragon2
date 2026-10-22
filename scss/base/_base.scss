@@ -1,0 +1,45 @@
+@use "../utilities/variables" as *;
+
+// ===== RESET GLOBAL (BOX MODEL) =====
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ===== BASE =====
+html {
+  font-size: 62.5%;
+}
+
+// Custom properties que usan los demás partials (1rem = 10px)
+:root {
+  --texto-size: #{$texto-size};
+  --h1-size: #{$h1-size};
+  --h2-size: #{$h2-size};
+  --h3-size: #{$h3-size};
+}
+
+// Bootstrap usa rem: con el 62.5% hay que fijar el tamaño base del body
+body {
+  background-color: $color-fondo;
+  font-size: var(--texto-size);
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  color: $color-texto;
+  padding-bottom: 4rem;
+}
+
+// ===== UTILIDADES DE ALINEACIÓN =====
+.txtaladerecha {
+  text-align: end;
+}
+
+.txtcentro {
+  text-align: center;
+}

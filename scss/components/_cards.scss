@@ -11,7 +11,7 @@
 .cortes-contenedor {
   display: grid;
   grid-template-columns: $una-columna;
-  gap: $espacio-medio;
+  gap: $espacio-chico + $espacio-mini;
 
   @include tablet {
     grid-template-columns: columnas(2);
@@ -23,8 +23,8 @@
 }
 
 .corte-card {
-  padding: $espacio-chico;
-    @extend %tarjeta-base;
+  padding: $espacio-grande - $espacio-chico;
+  @extend %tarjeta-base;
   @include efecto-tarjeta;
 
   img {
@@ -36,7 +36,7 @@
 
 // ===== Card de ofertas (Bootstrap con paleta propia) =====
 .card-oferta {
-    @extend %tarjeta-base;
+  @extend %tarjeta-base;
   border: 1px solid $color-primario;
   color: $color-texto;
   @include efecto-tarjeta(-10px, 0.4s);
@@ -50,12 +50,13 @@
 // ===== Aviso de la página de ofertas =====
 .aviso-ofertas {
   grid-area: aviso;
-  padding: $espacio-chico;
+  padding: $espacio-mini * 2;
   text-align: center;
   background-color: $color-acento;
   color: $color-texto;
   animation: aparecer-subiendo 0.8s ease-out both;
 }
+
 // ===== Animación de entrada (fotogramas clave) =====
 @keyframes aparecer-subiendo {
   from {

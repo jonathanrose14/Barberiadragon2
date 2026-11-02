@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // ===== COLORES =====
 $color-fondo: #FFF4EA;
 $color-primario: #9FAD9F;
@@ -20,6 +22,7 @@ $espacio-chico: 20px;
 $espacio-medio: 30px;
 $espacio-grande: 40px;
 $espacio-extra: 60px;
+$espacio-mini: math.div($espacio-chico, 2); // 20px / 2 = 10px
 
 // ===== BREAKPOINTS =====
 $bp-tablet: 768px;

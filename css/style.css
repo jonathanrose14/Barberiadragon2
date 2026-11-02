@@ -433,8 +433,19 @@ button {
   text-align: center;
   background-color: #E8B5A7;
   color: #414D4A;
+  animation: aparecer-subiendo 0.8s ease-out both;
 }
 
+@keyframes aparecer-subiendo {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .galeria__img {
   height: 40rem;
   object-fit: contain;

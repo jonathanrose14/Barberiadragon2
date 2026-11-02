@@ -26,17 +26,17 @@
   }
 }
 
-// Efecto hover/active de las tarjetas
-@mixin efecto-tarjeta {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+// Efecto hover/active de las tarjetas (con parámetros)
+@mixin efecto-tarjeta($elevacion: -6px, $duracion: 0.3s) {
+  transition: transform $duracion ease, box-shadow $duracion ease;
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY($elevacion);
     box-shadow: 0 8px 20px rgba($color-texto, 0.25);
   }
 
   &:active {
-    transform: translateY(-2px);
+    transform: translateY($elevacion * 0.33);
   }
 }
 

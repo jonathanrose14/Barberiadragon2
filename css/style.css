@@ -370,6 +370,11 @@ button {
   transform: scale(0.95);
 }
 
+.card-oferta, .corte-card {
+  background-color: #FFF4EA;
+  border-radius: 8px;
+}
+
 .cortes-contenedor {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -388,7 +393,6 @@ button {
 
 .corte-card {
   padding: 20px;
-  background-color: #FFF4EA;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .corte-card:hover {
@@ -396,7 +400,7 @@ button {
   box-shadow: 0 8px 20px rgba(65, 77, 74, 0.25);
 }
 .corte-card:active {
-  transform: translateY(-2px);
+  transform: translateY(-1.98px);
 }
 .corte-card img {
   display: block;
@@ -405,17 +409,16 @@ button {
 }
 
 .card-oferta {
-  background-color: #FFF4EA;
   border: 1px solid #9FAD9F;
   color: #414D4A;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .card-oferta:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(65, 77, 74, 0.25);
 }
 .card-oferta:active {
-  transform: translateY(-2px);
+  transform: translateY(-3.3px);
 }
 .card-oferta .card-body {
   display: flex;

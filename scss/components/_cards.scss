@@ -1,6 +1,12 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
+// Molde compartido por las tarjetas (solo se usa con @extend)
+%tarjeta-base {
+  background-color: $color-fondo;
+  border-radius: 8px;
+}
+
 // ===== TARJETAS DE CORTES (GRID: 1 columna en mobile) =====
 .cortes-contenedor {
   display: grid;
@@ -18,7 +24,7 @@
 
 .corte-card {
   padding: $espacio-chico;
-  background-color: $color-fondo;
+    @extend %tarjeta-base;
   @include efecto-tarjeta;
 
   img {
@@ -30,10 +36,10 @@
 
 // ===== Card de ofertas (Bootstrap con paleta propia) =====
 .card-oferta {
-  background-color: $color-fondo;
+    @extend %tarjeta-base;
   border: 1px solid $color-primario;
   color: $color-texto;
-  @include efecto-tarjeta;
+  @include efecto-tarjeta(-10px, 0.4s);
 
   .card-body {
     @include flex-columna(1.5rem);

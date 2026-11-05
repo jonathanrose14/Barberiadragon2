@@ -23,6 +23,7 @@ html {
 // Bootstrap usa rem: con el 62.5% hay que fijar el tamaño base del body
 body {
   background-color: $color-fondo;
+  color: $color-texto;
   font-size: var(--texto-size);
 }
 

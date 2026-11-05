@@ -15,6 +15,7 @@
   grid-template-columns: $una-columna;
   grid-template-areas:
     "banner"
+    "intro"
     "mapa"
     "cortes"
     "video";
@@ -28,9 +29,17 @@
     grid-template-columns: columnas(2);
     grid-template-areas:
       "banner banner"
+      "intro  intro"
       "cortes cortes"
       "mapa   video";
   }
+}
+
+.intro-inicio {
+  @include flex-columna($espacio-chico);
+  grid-area: intro;
+  padding: 0 $espacio-chico;
+  text-align: center;
 }
 
 .cortes {
@@ -82,7 +91,8 @@
     grid-template-columns: columnas(3);
     grid-template-areas:
       "titulo  titulo  titulo"
-      "ofertas ofertas aviso";
+      "ofertas ofertas ofertas"
+      "aviso   aviso   aviso";
   }
 }
 
@@ -101,7 +111,7 @@
   }
 
   @include desktop {
-    grid-template-columns: columnas(2);
+    grid-template-columns: columnas(4);
   }
 }
 

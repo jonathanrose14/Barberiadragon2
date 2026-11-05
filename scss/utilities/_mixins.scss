@@ -32,7 +32,7 @@
 
   &:hover {
     transform: translateY($elevacion);
-    box-shadow: 0 8px 20px rgba($color-texto, 0.25);
+    box-shadow: 0 8px 20px rgba($color-acento, 0.35);
   }
 
   &:active {

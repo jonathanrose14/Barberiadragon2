@@ -1,10 +1,10 @@
 @use "sass:math";
 
 // ===== COLORES =====
-$color-fondo: #FFF4EA;
-$color-primario: #9FAD9F;
-$color-acento: #E8B5A7;
-$color-texto: #414D4A;
+$color-fondo: #0D0D0D; // negro: fondo general y texto sobre dorado
+$color-primario: #1A1A1A; // negro suave: header, footer y campos
+$color-acento: #D4AF37; // dorado: marca, títulos, botones y bordes
+$color-texto: #FFFFFF; // blanco: texto general
 $color-error: #dc3545;
 
 // ===== TIPOGRAFÍAS =====
@@ -29,4 +29,4 @@ $bp-tablet: 768px;
 $bp-desktop: 1024px;
 
 // ===== GRID =====
-$una-columna: minmax(0, 1fr);
+$una-columna: minmax(0, 1fr);

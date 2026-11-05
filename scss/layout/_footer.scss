@@ -7,16 +7,23 @@ footer {
   align-items: center;
   padding: $espacio-grande $espacio-chico;
   background-color: $color-primario;
-  color: $color-fondo;
+  color: $color-texto;
+
+  // ===== FOOTER - NEWSLETTER =====
+  .footer-newsletter {
+    @include flex-columna($espacio-chico);
+    align-items: center;
+    text-align: center;
+  }
 
   // ===== FOOTER - REDES SOCIALES =====
   a {
     text-decoration: none;
-    color: $color-fondo;
+    color: $color-texto;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
 
     img {
       width: 2.4rem;
@@ -26,7 +33,7 @@ footer {
 
     // estados interactivos de los links del footer
     &:hover {
-      opacity: 0.7;
+      text-decoration: underline;
     }
 
     &:focus {
@@ -34,7 +41,6 @@ footer {
     }
 
     &:active {
-      opacity: 1;
       transform: scale(0.95);
     }
   }

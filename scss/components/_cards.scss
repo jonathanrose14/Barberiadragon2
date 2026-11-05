@@ -37,9 +37,15 @@
 // ===== Card de ofertas (Bootstrap con paleta propia) =====
 .card-oferta {
   @extend %tarjeta-base;
-  border: 1px solid $color-primario;
+  border: 1px solid $color-acento;
   color: $color-texto;
   @include efecto-tarjeta(-10px, 0.4s);
+
+  // todas las fotos de ofertas con la misma proporción
+  .card-img-top {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
 
   .card-body {
     @include flex-columna(1.5rem);
@@ -50,9 +56,13 @@
 // ===== Aviso de la página de ofertas =====
 .aviso-ofertas {
   grid-area: aviso;
+  justify-self: center;
+  width: 100%;
+  max-width: 70rem;
   padding: $espacio-mini * 2;
   text-align: center;
-  background-color: $color-acento;
+  border-top: 1px solid $color-acento;
+  border-bottom: 1px solid $color-acento;
   color: $color-texto;
   animation: aparecer-subiendo 0.8s ease-out both;
 }

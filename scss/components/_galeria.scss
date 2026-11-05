@@ -4,10 +4,10 @@
 .galeria__img {
   height: 40rem;
   object-fit: contain;
-  background-color: $color-texto;
+  background-color: $color-primario;
 }
 
 .galeria__caption {
-  background-color: rgba($color-texto, 0.75);
+  background-color: rgba($color-fondo, 0.75);
   border-radius: 0.5rem;
 }

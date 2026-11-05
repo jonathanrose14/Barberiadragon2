@@ -4,13 +4,18 @@
 .modal-dragon {
   background-color: $color-fondo;
   color: $color-texto;
-  border: 2px solid $color-primario;
+  border: 2px solid $color-acento;
 
   .modal-header,
   .modal-body,
   .modal-footer {
     padding: 2rem;
-    border-color: $color-primario;
+    border-color: $color-acento;
+  }
+
+  // la cruz de cerrar pasa a clara sobre fondo negro
+  .btn-close {
+    filter: invert(1);
   }
 
   .modal-title {

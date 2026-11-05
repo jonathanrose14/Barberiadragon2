@@ -8,6 +8,15 @@
   --bs-navbar-toggler-padding-y: 0.8rem;
   --bs-navbar-toggler-padding-x: 1.2rem;
 
+  // ícono hamburguesa claro sobre el fondo negro
+  .navbar-toggler {
+    border-color: $color-acento;
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
   .navbar-nav .nav-link {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
@@ -18,20 +27,20 @@
 
     // link de la página actual
     &.active {
-      color: $color-texto;
+      color: $color-acento;
       font-weight: 700;
     }
 
     // estados interactivos (orden: hover, focus, active)
     &:hover {
       color: $color-fondo;
-      background-color: $color-texto;
+      background-color: $color-acento;
     }
 
     &:focus {
       color: $color-fondo;
-      background-color: $color-texto;
-      outline: 2px solid $color-acento;
+      background-color: $color-acento;
+      outline: 2px solid $color-texto;
     }
 
     &:active {

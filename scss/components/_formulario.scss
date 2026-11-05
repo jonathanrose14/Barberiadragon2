@@ -15,7 +15,9 @@
     width: 100%;
     padding: 10px;
     font-size: var(--texto-size);
-    border: 2px solid $color-primario;
+    color: $color-texto;
+    background-color: $color-primario;
+    border: 2px solid $color-acento;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     // estados interactivos de los campos
@@ -30,13 +32,19 @@
     }
   }
 
+  input::placeholder,
+  textarea::placeholder {
+    color: $color-texto;
+    opacity: 0.75;
+  }
+
   textarea {
     min-height: 15rem;
     resize: vertical;
   }
 
-  input[type="submit"] {
-    width: auto;
+  button[type="submit"] {
+    align-self: flex-start;
     padding: 10px 30px;
   }
 

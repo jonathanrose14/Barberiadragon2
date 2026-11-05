@@ -21,6 +21,11 @@ input {
   font-family: $fuente-titulos;
 }
 
+h1,
+h2 {
+  color: $color-acento;
+}
+
 h1 {
   font-size: var(--h1-size);
   font-weight: 800;
@@ -32,6 +37,12 @@ h2 {
 }
 
 h3 {
+  text-align: center;
+  font-size: var(--h3-size);
+}
+
+// Títulos h2 que se ven del tamaño de un h3 (tarjetas, aviso y modal)
+.titulo-tarjeta {
   text-align: center;
   font-size: var(--h3-size);
 }

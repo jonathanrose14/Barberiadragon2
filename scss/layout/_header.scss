@@ -4,18 +4,23 @@
 .navbar-dragon {
   .navbar-brand {
     white-space: normal;
-    color: $color-texto;
+    color: $color-acento;
     font-family: $fuente-cuerpo;
     transition: color 0.3s ease;
 
     &:hover {
-      color: $color-fondo;
+      color: $color-acento;
+      text-decoration: underline;
     }
   }
 }
 
 .navbar-brand__titulo {
+  margin-bottom: 0.5rem;
+  font-family: $fuente-titulos;
   font-size: var(--h2-size);
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .navbar-brand__lema {

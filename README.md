@@ -3,7 +3,7 @@
 Sitio web de una barbería, desarrollado como proyecto final del curso de desarrollo web en Coderhouse.
 
 ## 🔗 Sitio desplegado
-PEGAR_ACA_EL_LINK_DE_VERCEL
+https://barberiadragon2.vercel.app/
 
 ## Páginas
 - **Inicio**: banner, mapa, cortes destacados, galería con carousel, video y newsletter
@@ -42,4 +42,4 @@ PEGAR_ACA_EL_LINK_DE_VERCEL
 4. Para recompilar los estilos: `npm run sass`
 
 ## Autor
-[Jonathan Lepez] - [@jonathanrose14](https://github.com/jonathanrose14)
+[Jonathan Lepez] - [@jonathanrose14](https://github.com/jonathanrose14)

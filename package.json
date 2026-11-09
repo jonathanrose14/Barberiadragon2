@@ -1,7 +1,7 @@
 {
   "name": "git",
   "version": "1.0.0",
-  "description": "Sitio web de una barbería, desarrollado como pre-entrega del curso de desarrollo web en Coderhouse.",
+  "description": "Sitio web de una barbería, desarrollado como proyecto final del curso de desarrollo web en Coderhouse.",
   "homepage": "https://github.com/jonathanrose14/Barberiadragon2#readme",
   "bugs": {
     "url": "https://github.com/jonathanrose14/Barberiadragon2/issues"
@@ -15,6 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "sass": "sass scss/main.scss styles/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

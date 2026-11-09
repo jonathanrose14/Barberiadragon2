@@ -42,4 +42,4 @@ https://barberiadragon2.vercel.app/
 4. Para recompilar los estilos: `npm run sass`
 
 ## Autor
-[Jonathan Lepez] - [@jonathanrose14](https://github.com/jonathanrose14)
+Jonathan Lepez - [@jonathanrose14](https://github.com/jonathanrose14)
